@@ -37,15 +37,15 @@ public class Advant1{
 
         return digit.toString();
     }
-    public static void adder(String add) {
-        if (!add.isEmpty()) {
+    public static void adder(String add){
+        if(!add.isEmpty()){
             String[] nums = add.split(",\\s*");
             int sum = 0;
-            for (String x : nums) {
+            for(String x : nums){
                 sum += Integer.parseInt(x);
             }
             System.out.println(sum);
-        } else {
+        }else{
             System.out.println("No valid numbers found.");
         }
     }
