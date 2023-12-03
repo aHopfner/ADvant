@@ -6,22 +6,11 @@ public class Advant1{
     public static void main(String[] args){
         String path = "G:/input.txt";
         String add = "";
-        int nums = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(path))){
             String line = reader.readLine();
             while(line != null){
-                nums = 0;
                 System.out.println("Line: " + line);
-                for(int i = 0; i < line.length(); i++){
-                    char x = line.charAt(i);
-                    if(Character.isDigit(x)){
-                        nums++;
-                    }
-                }
-                if(nums >= 2){
-                        add += appender(line)+ ", ";
-                        System.out.println("Adding: " + add);
-                }
+                add += appender(line)+ ", ";
                 line = reader.readLine();
             }
             adder(add);
